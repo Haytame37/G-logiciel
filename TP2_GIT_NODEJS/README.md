@@ -38,16 +38,19 @@ TP2_GIT_NODEJS/
 ## 🔧 Installation et Exécution
 
 ### Prérequis
+
 - Node.js (version 14+)
 - Git
 
 ### Installation
+
 ```bash
 cd mon-projet-node
 npm install
 ```
 
 ### Exécution
+
 ```bash
 npm start
 ```
@@ -55,10 +58,12 @@ npm start
 ## 📝 Fonctionnalités Implémentées
 
 ### Fonctions Mathématiques
+
 - **addition(a, b)** : Addition robuste avec gestion des types (conversion en Number, vérification NaN)
 - **soustraction(a, b)** : Soustraction simple
 
 ### Gestion des Branches Git
+
 - Branche `main` : Version stable
 - Branche `dev` : Développement des nouvelles fonctionnalités
 - Branche `feature` : Fonctionnalités spécifiques (soustraction)

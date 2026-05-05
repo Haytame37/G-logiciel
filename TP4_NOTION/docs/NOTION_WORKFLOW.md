@@ -5,9 +5,10 @@
 ### Tableau Kanban Principal
 
 **Nom** : Projet To-Do List  
-**Vue** : Kanban  
+**Vue** : Kanban
 
 **Colonnes** :
+
 1. **À faire** (To Do)
    - Tâches planifiées
    - Pas encore commencées
@@ -25,6 +26,7 @@
 ### Cartes du Projet
 
 #### Carte 1 : Ajouter une tâche
+
 - **Statut initial** : À faire
 - **Description** : Implémenter la fonctionnalité d'ajout de tâche
 - **Branche Git** : feature/add-task
@@ -37,6 +39,7 @@
   - [ ] Tests manuels
 
 #### Carte 2 : Supprimer une tâche
+
 - **Statut initial** : À faire
 - **Description** : Implémenter la suppression de tâche
 - **Branche Git** : feature/delete-task
@@ -49,6 +52,7 @@
   - [ ] Tests
 
 #### Carte 3 : Marquer comme terminée
+
 - **Statut initial** : À faire
 - **Description** : Implémenter le marquage de tâche terminée
 - **Branche Git** : feature/mark-completed
@@ -77,6 +81,7 @@
 ### Étape 2 : Démarrage du Développement
 
 **Dans Notion** :
+
 ```
 1. Ouvrir la carte
 2. Changer le statut à "En cours"
@@ -84,6 +89,7 @@
 ```
 
 **Dans Git** :
+
 ```bash
 # Créer une branche basée sur la carte Notion
 git checkout -b feature/[nom-de-la-fonctionnalite]
@@ -95,6 +101,7 @@ git checkout -b feature/add-task
 ### Étape 3 : Développement et Commits
 
 **Code** :
+
 ```bash
 # Faire les modifications
 # Ajouter les fichiers
@@ -110,6 +117,7 @@ Lié à la carte Notion : [ID ou nom]"
 ```
 
 **Message de Commit Recommandé** :
+
 ```
 Ajout du formulaire d'ajout de tâche
 
@@ -140,6 +148,7 @@ git push origin feature/add-task
 ### Étape 5 : Fusion et Mise à Jour Notion
 
 **Git** :
+
 ```bash
 # Merger la branche dans develop
 git checkout develop
@@ -151,6 +160,7 @@ git branch -d feature/add-task
 ```
 
 **Notion** :
+
 ```
 1. Ouvrir la carte
 2. Changer le statut à "Terminé"
@@ -164,15 +174,15 @@ git branch -d feature/add-task
 
 ## 📊 Matrice de Synchronisation
 
-| Étape | Notion | Git | Action |
-|-------|--------|-----|--------|
-| 1 | Créer carte | - | Planification |
-| 2 | "À faire" | git branch | Préparation |
-| 3 | "En cours" | feature branch | Développement |
-| 4 | "En cours" | commits | Progression |
-| 5 | Checklist | code review | Qualité |
-| 6 | "Terminé" | git merge | Intégration |
-| 7 | Lien GitHub | PR URL | Traçabilité |
+| Étape | Notion      | Git            | Action        |
+| ----- | ----------- | -------------- | ------------- |
+| 1     | Créer carte | -              | Planification |
+| 2     | "À faire"   | git branch     | Préparation   |
+| 3     | "En cours"  | feature branch | Développement |
+| 4     | "En cours"  | commits        | Progression   |
+| 5     | Checklist   | code review    | Qualité       |
+| 6     | "Terminé"   | git merge      | Intégration   |
+| 7     | Lien GitHub | PR URL         | Traçabilité   |
 
 ---
 
@@ -197,29 +207,34 @@ git branch -d feature/add-task
 ## 📝 Documentation Notion Sections
 
 ### Section 1 : Tableau Kanban
+
 - Vue principale du projet
 - Drag & drop des cartes
 - Toutes les fonctionnalités visibles
 
 ### Section 2 : Documentation Fonctionnelle
+
 - Page par fonctionnalité
 - Exigences détaillées
 - Cas d'usage
 - Acceptation criteria
 
 ### Section 3 : Liens GitHub
+
 - Branches créées
 - Commits importants
 - Pull Requests
 - Issues
 
 ### Section 4 : Rapport de Problèmes
+
 - Problèmes rencontrés
 - Solutions apportées
 - Commits associés
 - Impact sur le calendrier
 
 ### Section 5 : Notes de Réunion
+
 - Décisions prises
 - Actions à faire
 - Blocages identifiés
@@ -272,13 +287,13 @@ jobs:
 
 ```javascript
 // Exemple de mise à jour automatique
-fetch('https://api.notion.com/v1/pages/[PAGE_ID]', {
-  method: 'PATCH',
-  headers: { 'Authorization': `Bearer ${NOTION_TOKEN}` },
+fetch("https://api.notion.com/v1/pages/[PAGE_ID]", {
+  method: "PATCH",
+  headers: { Authorization: `Bearer ${NOTION_TOKEN}` },
   body: JSON.stringify({
     properties: {
-      Status: { select: { name: 'Terminé' } }
-    }
-  })
+      Status: { select: { name: "Terminé" } },
+    },
+  }),
 });
 ```

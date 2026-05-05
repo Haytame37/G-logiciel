@@ -96,11 +96,13 @@ npx http-server src/
 ### Étape 1 : Tableau Kanban dans Notion
 
 Créer un tableau Kanban avec 3 colonnes :
+
 - **À faire** : Tâches planifiées
 - **En cours** : Tâches en développement
 - **Terminé** : Tâches achevées
 
 **Cartes du projet :**
+
 1. Fonctionnalité 1 : Ajouter une tâche
 2. Fonctionnalité 2 : Supprimer une tâche
 3. Fonctionnalité 3 : Marquer comme terminée
@@ -124,41 +126,51 @@ git push origin feature/[name]
 
 ### Étape 3 : Synchronisation
 
-| Git Branch | Notion Status | Description |
-|-----------|--------------|-------------|
-| feature/add-task | En cours → Terminé | Ajout de tâches |
-| feature/delete-task | En cours → Terminé | Suppression de tâches |
+| Git Branch             | Notion Status      | Description            |
+| ---------------------- | ------------------ | ---------------------- |
+| feature/add-task       | En cours → Terminé | Ajout de tâches        |
+| feature/delete-task    | En cours → Terminé | Suppression de tâches  |
 | feature/mark-completed | En cours → Terminé | Marquer comme terminée |
 
 ## 📝 Exigences Fonctionnelles
 
 ### RF1 : Ajouter une tâche
+
 **Description** : L'utilisateur peut ajouter une nouvelle tâche à la liste
+
 - Saisir du texte dans un champ
 - Cliquer sur "Ajouter" ou appuyer sur Entrée
 - La tâche s'ajoute à la liste
 - Le champ est vidé après l'ajout
 
 ### RF2 : Supprimer une tâche
+
 **Description** : L'utilisateur peut supprimer une tâche
+
 - Bouton "Supprimer" pour chaque tâche
 - Confirmation avant suppression
 - Suppression en masse avec "Effacer les tâches terminées"
 
 ### RF3 : Marquer comme terminée
+
 **Description** : L'utilisateur peut marquer une tâche comme terminée
+
 - Checkbox pour chaque tâche
 - Style visuel différent pour les tâches terminées
 - Compteur de tâches terminées
 
 ### RF4 : Filtrer les tâches
+
 **Description** : Afficher les tâches selon leur statut
+
 - Filtre "Toutes"
 - Filtre "En cours"
 - Filtre "Terminées"
 
 ### RF5 : Statistiques
+
 **Description** : Afficher les statistiques de la liste
+
 - Total des tâches
 - Nombre de terminées
 - Nombre en cours
@@ -179,39 +191,47 @@ main (branche principale - stable)
 ## 🐛 Problèmes Rencontrés et Solutions
 
 ### Problème 1 : Conflit de fusion
+
 **Description** : Conflit lors de la fusion des branches
 **Solution** : Résolution manuelle du conflit avec VS Code, test après fusion
 
 ### Problème 2 : localStorage limité
+
 **Description** : localStorage a une limite de taille
 **Solution** : Implémenter une gestion optimale des données
 
 ### Problème 3 : Persistance entre onglets
+
 **Description** : Synchroniser les données entre plusieurs onglets
 **Solution** : Utiliser des événements storage
 
 ### Problème 4 : Sécurité XSS
+
 **Description** : Injection HTML malveillante
 **Solution** : Échapper le HTML avec escapeHtml()
 
 ## 📚 Documentation Notion
 
 ### Section 1 : Tableau Kanban
+
 - Visualiser l'état des fonctionnalités
 - Mises à jour en temps réel
 - Lien vers les branches GitHub
 
 ### Section 2 : Documentation Fonctionnelle
+
 - Exigences pour chaque fonctionnalité
 - Cas d'usage
 - Critères d'acceptation
 
 ### Section 3 : Rapport
+
 - Problèmes rencontrés
 - Solutions apportées
 - Commits associés
 
 ### Section 4 : Réunion Récapitulative
+
 - Progrès réalisés
 - Points à améliorer
 - Améliorations futures

@@ -42,12 +42,14 @@ TP3_DOCKER/
 ## 🔧 Services Configurés
 
 ### 1. Frontend (Nginx)
+
 - **Port**: 8080 → 80
 - **Image**: nginx:alpine
 - **Fonction**: Serveur web statique
 - **URL d'accès**: http://localhost:8080
 
 ### 2. Database (PostgreSQL 13)
+
 - **Port**: 5432 (interne)
 - **Image**: postgres:13
 - **Variables d'environnement**:
@@ -57,6 +59,7 @@ TP3_DOCKER/
 - **Volume**: db-data (persistance)
 
 ### 3. PgAdmin (Administration DB)
+
 - **Port**: 5050 → 80
 - **Image**: dpage/pgadmin4:latest
 - **URL d'accès**: http://localhost:5050
@@ -67,6 +70,7 @@ TP3_DOCKER/
 ## 🚀 Installation et Exécution
 
 ### Prérequis
+
 - Docker Desktop (ou Docker + Docker Compose installés)
 - Port 8080 disponible (frontend)
 - Port 5050 disponible (pgadmin)
@@ -105,6 +109,7 @@ docker-compose ps
 ```
 
 **Sortie attendue:**
+
 ```
 NAME           STATUS          PORTS
 frontend       Up X seconds    0.0.0.0:8080->80/tcp
@@ -139,11 +144,13 @@ pgadmin        Up X seconds    0.0.0.0:5050->80/tcp
 ## 🐳 Concepts Docker Maîtrisés
 
 ### Dockerfile
+
 - Utilisation d'images de base (nginx:alpine)
 - Instructions COPY, EXPOSE, CMD
 - Optimisation de la taille avec alpine
 
 ### Docker Compose
+
 - Définition de services multi-conteneurs
 - Gestion des ports (port mapping)
 - Configuration des volumes (persistance)
@@ -152,6 +159,7 @@ pgadmin        Up X seconds    0.0.0.0:5050->80/tcp
 - Dépendances entre services (depends_on)
 
 ### Concepts Avancés
+
 - Volumes nommés pour la persistance
 - Réseaux personnalisés (bridge networks)
 - Stratégies de redémarrage (restart: unless-stopped)
@@ -170,12 +178,14 @@ pgadmin        Up X seconds    0.0.0.0:5050->80/tcp
 ```
 
 Communication interne:
+
 - Frontend → PostgreSQL: via `db:5432`
 - PgAdmin → PostgreSQL: via `db:5432`
 
 ## 💾 Persistance des Données
 
 Le volume `db-data` assure que :
+
 - Les données PostgreSQL persistent après l'arrêt du conteneur
 - Les données survivent au redémarrage de l'application
 - Pour réinitialiser les données : `docker-compose down -v`
@@ -183,6 +193,7 @@ Le volume `db-data` assure que :
 ## 🔍 Dépannage
 
 ### Les conteneurs ne démarrent pas
+
 ```bash
 # Vérifier les logs
 docker-compose logs
@@ -194,6 +205,7 @@ docker-compose logs pgadmin
 ```
 
 ### Impossible d'accéder à localhost:8080
+
 ```bash
 # Vérifier que le port n'est pas occupé
 netstat -ano | findstr :8080  # Windows
@@ -201,6 +213,7 @@ lsof -i :8080                  # macOS/Linux
 ```
 
 ### Erreur de connexion PostgreSQL dans PgAdmin
+
 - Vérifier que le service `db` est en cours d'exécution
 - Vérifier les identifiants (user: admin, password: adminpassword)
 - Vérifier que le host est bien `db` (pas localhost ou 127.0.0.1)

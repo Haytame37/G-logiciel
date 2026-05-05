@@ -10,7 +10,7 @@
 Ce TP couvre les concepts fondamentaux de la Programmation Orientée Objet (POO) en Java à travers trois exercices pratiques :
 
 1. **Exercice 1.1** - Système de gestion d'animaux dans un zoo
-2. **Exercice 1.2** - Système de gestion des véhicules pour une société de transport  
+2. **Exercice 1.2** - Système de gestion des véhicules pour une société de transport
 3. **Exercice 1.3** - Système de gestion de comptes bancaires
 
 ## 🎯 Objectifs Pédagogiques
@@ -44,16 +44,18 @@ TP1_POO/
 ## 🔧 Compilation et Exécution
 
 ### Compilation
+
 ```bash
 javac src/*.java
 ```
 
 ### Exécution des programmes
+
 ```bash
 # Exercice 1.1 - Gestion du zoo
 java Zoo
 
-# Exercice 1.2 - Gestion des véhicules  
+# Exercice 1.2 - Gestion des véhicules
 java GestionTransport
 
 # Exercice 1.3 - Gestion bancaire
@@ -63,10 +65,12 @@ java Banque
 ## 📚 Concepts POO Implémentés
 
 ### 1. Encapsulation
+
 - **Définition**: L'encapsulation est le mécanisme qui consiste à regrouper les données (attributs) et les méthodes qui les manipulent dans une même classe, tout en restreignant l'accès direct aux données.
 - **Implementation**: Tous les attributs sont déclarés `private` avec des getters/setters `public`.
 
 **Exemple dans `Animal.java`**:
+
 ```java
 private String nom;  // Attribut privé
 
@@ -80,10 +84,12 @@ public void setNom(String nom) {  // Setter public
 ```
 
 ### 2. Héritage
+
 - **Définition**: L'héritage permet à une classe (sous-classe) d'hériter des attributs et méthodes d'une autre classe (super-classe).
 - **Implementation**: Utilisation du mot-clé `extends`.
 
 **Exemple**:
+
 ```java
 class Mammifere extends Animal {
     // Hérite de tous les attributs et méthodes de Animal
@@ -91,10 +97,12 @@ class Mammifere extends Animal {
 ```
 
 ### 3. Abstraction
+
 - **Définition**: L'abstraction consiste à définir des classes abstraites qui ne peuvent pas être instanciées directement et qui contiennent des méthodes abstraites devant être implémentées par les sous-classes.
 - **Implementation**: Utilisation du mot-clé `abstract`.
 
 **Exemple dans `Animal.java`**:
+
 ```java
 abstract class Animal {
     public abstract void faireDuBruit();  // Méthode abstraite
@@ -102,10 +110,12 @@ abstract class Animal {
 ```
 
 ### 4. Polymorphisme
+
 - **Définition**: Le polymorphisme permet à des objets de types différents d'être traités de manière uniforme à travers une interface commune.
 - **Implementation**: Une variable de type super-classe peut référencer un objet de sous-classe.
 
 **Exemple dans `Zoo.java`**:
+
 ```java
 Animal tigre = new Mammifere("Tigre");      // Polymorphisme
 Animal perroquet = new Oiseau("Perroquet");  // Polymorphisme
@@ -113,14 +123,14 @@ Animal perroquet = new Oiseau("Perroquet");  // Polymorphisme
 
 ## 🔍 Mots-clés Java Utilisés
 
-| Mot-clé | Utilisation | Exemple |
-|---------|-------------|---------|
-| `abstract` | Déclare une classe ou méthode abstraite | `abstract class Animal` |
-| `extends` | Implémente l'héritage | `class Mammifere extends Animal` |
-| `@Override` | Indique la redéfinition de méthode | `@Override public void faireDuBruit()` |
-| `super` | Appelle le constructeur ou méthode parent | `super(nom);` |
-| `private` | Restreint l'accès aux attributs | `private String nom;` |
-| `public` | Permet l'accès depuis n'importe où | `public String getNom()` |
+| Mot-clé     | Utilisation                               | Exemple                                |
+| ----------- | ----------------------------------------- | -------------------------------------- |
+| `abstract`  | Déclare une classe ou méthode abstraite   | `abstract class Animal`                |
+| `extends`   | Implémente l'héritage                     | `class Mammifere extends Animal`       |
+| `@Override` | Indique la redéfinition de méthode        | `@Override public void faireDuBruit()` |
+| `super`     | Appelle le constructeur ou méthode parent | `super(nom);`                          |
+| `private`   | Restreint l'accès aux attributs           | `private String nom;`                  |
+| `public`    | Permet l'accès depuis n'importe où        | `public String getNom()`               |
 
 ## 📝 Réponses aux Questions Théoriques
 
@@ -147,6 +157,7 @@ Animal perroquet = new Oiseau("Perroquet");  // Polymorphisme
 ## 🚀 Résultats Attendus
 
 ### Exercice 1.1 - Zoo
+
 ```
 Tigre grogne.
 Perroquet chante.
@@ -156,6 +167,7 @@ L'oiseau vole.
 ```
 
 ### Exercice 1.2 - Gestion Transport
+
 ```
 Le véhicule démarre.
 Voiture: Toyota Corolla (2021), Portes: 4
@@ -166,6 +178,7 @@ Moto: Yamaha MT-07 (2022), Guidon: Sport
 ```
 
 ### Exercice 1.3 - Banque
+
 ```
 === Test Compte Courant ===
 Compte courant n°CC001 avec solde: 1000.0€
@@ -189,6 +202,7 @@ Erreur: Le taux d'intérêt doit être positif.
 ## ✅ Validation
 
 Ce TP respecte les contraintes suivantes pour l'agent de correction automatique :
+
 - ✅ Respect strict de la casse et du nommage des classes/méthodes
 - ✅ Utilisation de l'encapsulation avec attributs `private`
 - ✅ Implémentation correcte des getters/setters
