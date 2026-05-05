@@ -1,6 +1,6 @@
 # TP1 - Programmation Orientée Objet (POO)
 
-**Auteur**: Haytam EL HACHMI  
+**Auteur**: Haytame EL ATRAOUI  
 **Module**: Génie Logiciel - ENSA-BM  
 **Professeur**: Pr. BE.ELBAGHAZAOUI  
 **Date**: 2026
