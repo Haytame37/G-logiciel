@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Ma To-Do List</h1>
+            <p class="subtitle">Gérez vos tâches efficacement</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche...">
+            <button id="addTaskBtn" class="btn-add">Ajouter</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="active">En cours</button>
+            <button class="filter-btn" data-filter="completed">Terminées</button>
+        </div>
+
+        <div class="stats">
+            <span>Total: <strong id="totalCount">0</strong></span>
+            <span>Complétées: <strong id="completedCount">0</strong></span>
+            <span>En cours: <strong id="activeCount">0</strong></span>
+        </div>
+
+        <ul id="taskList" class="task-list">
+            <!-- Les tâches s'ajoutent ici dynamiquement -->
+        </ul>
+
+        <div class="empty-state" id="emptyState">
+            <p>📭 Aucune tâche. Ajoutez-en une pour commencer!</p>
+        </div>
+
+        <button id="clearCompletedBtn" class="btn-clear">Effacer les tâches terminées</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
